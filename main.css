@@ -1,0 +1,31 @@
+<style>
+          html
+          {
+              font-family: helvetica;
+              background-image: url(https://www.skotcher.com/wall/4d2cc02a843fcc46e3ebaed3953fea5c/bridge-fog-golden-gate-bridge-mist-san-francisco.jpg)
+          }
+            .centerImage
+          {
+              text-align:center;
+              display:block;
+          }
+           p
+            {
+                text-decoration-skip: objects;
+            }
+          a:link 
+          {color:green; background-color:transparent; text-decoration:none}
+          a:visited
+          {color:black; background-color:transparent; text-decoration:none}
+          a:hover  
+          {color:red; background-color:transparent; text-decoration:underline}
+          a:active  
+          {color:yellow; background-color:transparent; text-decoration:underline}
+          td
+          {
+              font-family: monospace;
+              font-size: 40px;
+              border-bottom-style: dashed;
+              margin-bottom: auto;
+              border-bottom-color: red;
+      </style>
