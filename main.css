@@ -1,4 +1,4 @@
-<style>
+
           html
           {
               font-family: helvetica;
@@ -27,5 +27,68 @@
               font-size: 40px;
               border-bottom-style: dashed;
               margin-bottom: auto;
-              border-bottom-color: red;
-      </style>
+              border-bottom-color: red;}
+          .footer {
+             
+              bottom: 0;
+              margin-left: auto;
+              background-color: aqua;
+          }
+
+body {
+    margin: 0;
+}
+
+.sidebar {
+    width: 150px;
+    height: 100%;
+    position: fixed;
+    background: white;
+    top: 0;
+    left: 0;
+    font-size: 25px;
+    
+}
+.sidebar ul {
+    list-style: none;
+    padding-left: 10px;
+}
+.sidebar ul li {
+    height: 50px;
+}
+
+.socialnetwrok {
+    right: 10px;
+    bottom: 10px;
+    position: fixed;
+    left: 150px;
+}
+
+.socialnetwrok a {
+    float: right;
+    
+}
+
+.main-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 150px;
+}
+
+.main-content img {
+    
+}
+
+.footerbottom {
+    
+}
+
+
+.center-child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
