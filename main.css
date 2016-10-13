@@ -62,3 +62,8 @@ body {
 .foont {
     font-family: 'Handlee', cursive;
 }
+.center-cat {
+    position: absolute;
+    top: 20%;
+    left: 850px;
+}
