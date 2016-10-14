@@ -26,7 +26,7 @@ body {
     background: #333;
     top: 0;
     left: 0;
-    font-size: 25px;
+    font-size: 30px;
     color: black;
 }
 .sidebar ul {
@@ -34,7 +34,7 @@ body {
     padding-left: 10px;
 }
 .sidebar ul li {
-    height: 50px;
+    height: 70px;
 }
 .socialnetwrok {
     right: 10px;
@@ -64,6 +64,17 @@ body {
 }
 .center-cat {
     position: absolute;
-    top: 20%;
-    left: 850px;
+    top: 15%;
+    left: 700px;
+}
+.about {
+    font-size: 24px;
+    color: black;
+    padding-left: 15px;
+    
+    
+}
+.about a{
+    color: blue;
+    text-decoration: none;
 }
