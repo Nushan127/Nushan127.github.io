@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Rock, paper, scissors</title>
+</head>
+
+<body>
+    <h1> scissor , paper, rock </h1>
+
+
+    <a href="#" onclick=doTurn( "rock")>Chose rock</a><br>
+    <a href="#" onclick=doTurn( "scissors")>Chose scissors</a><br>
+    <a href="#" onclick=doTurn( "rock")>Chose paper</a><br>
+    <div id="output">
+
+
+    </div>
+
+
+
+    <script>
+        /* TODO: 
+                -user input
+                -score increments
+                -add output other than console
+                -move script to external file
+              */
+
+        
+
+
+var myArray = [
+  "rock",
+  "paper",
+  "scissors"
+];
+
+var computerChoice = myArray[Math.floor(Math.random()*myArray.length)];
+
+                // string variables to hold possible choices
+                // we'll use these later on
+                // var choice1 = "rock";
+                // var choice2 = "paper";
+                // var choice3 = "scissors";
+                // number variables to hold the scores
+                var humanScore = 0;
+                var computerScore = 0;
+
+                // string variables to hold the choices
+
+
+                //var to hold output
+                var output = "";
+
+                doTurn(); // just testing our function
+
+                function doTurn(humanChoice) {
+                    // try changing these values to test!
+
+                    if (humanChoice == computerChoice) { // Draw
+                        console.log("Draw!");
+                        output = "Draw";
+
+                    }
+
+                    if (humanChoice === "rock") {
+                        if (computerChoice === "scissors") {
+                            // Human won
+                            console.log("You win!");
+                            output = "You win";
+                            output += humanScore++;
+                        }
+                    }
+
+                    if (humanScore === "paper") {
+                        if (computerChoice === "rock") {
+                            console.log("You win!");
+                            output = "You win";
+                            output += humanScore++;
+                        }
+                    } else { // Human lost--no need to check by process of elimination
+                        console.log("You lose!");
+                        output = "You lose";
+                        output += computerScore++;
+                    }
+
+                    if (humanChoice === "scissors") {
+                        if (computerChoice === "rock") {
+                            console.log("You lose!");
+                            output = "You lose";
+                            output += computerScore++;
+                        }
+                    }
+
+                    document.getElementById("output").innerHTML = output;
+                }
+    </script>
+
+</body>
+
+</html>
