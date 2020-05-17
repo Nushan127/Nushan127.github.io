@@ -1,0 +1,274 @@
+<head>
+  <title>KICK</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="images/icon.png">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script defer src="scripts/scripts.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  <!DOCTYPE html>
+  <html lang="en">
+ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <script src="https://use.fontawesome.com/c1aff5cbab.js"></script>
+  
+  </head>
+  
+  <body>
+      <div class="header">
+          <a href ="index.html"> <img src="images/logo.png"> </a>
+      </div>
+  
+      <div class="topnav" id="navbar">
+        <a href="aboutus.html">About</a>
+        <a href="brands.html">Collection</a>
+        <a href="contact.html">Contact</a>
+        <a href="faqs.html">FAQs</a>
+        <a href="login.html" style="float:right" class="fa fa-user fa-5px"> </a>
+        <a href="cart.html" style="float: right;" class="fa fa-shopping-cart fa-5px"></a>
+        <form style="float:right">
+          <input type="text" name="search" placeholder="Search">
+        </form>
+      </div>
+  
+
+<form id= "form" class="form">
+  <div class = "signup-container">
+  <h1> Sign up Now </h1>
+    <h2> Personal Information </h2>
+    <div class="textsection">
+      <input type="text"  placeholder="Enter your First Name" name="" value="" >
+      <input type="text"  placeholder="Enter your Last Name" name=""value="" >
+      <input type="text"  placeholder="Enter a username" name="" value="" >
+
+      <input type="email"  id = "msg"  placeholder="Enter your E-mail" name="" value="" >
+      <input type="password" placeholder="Enter your Password" id = "password" name="password" value=""   required>
+      <input type="password" placeholder="Confirm your Password" id = "password2" name="" value="" required>
+
+    </div>
+    <div id = "popupmsg">
+      <p id ="capital" class = "invalid"> At lease 1 UpperCase is needed </p>
+      <p id="number" class="invalid"> At lease one number is required </p>
+      <p id ="length" class="invalid" >Minimun 8 characters </p>
+      <p id = "input" class= "invalid"> </p>
+    </div>
+
+    <div id = "unmatchError">
+        <p id = "noMatch" class = "invalid">Password doesn't Match, Try again</p>
+        <P id = "match"  class = "valid" > Password match </P>
+    </div>
+    <p id = "valid" class = "valid"> </p>
+    
+    <h3>
+    <p><input type="checkbox" required> I agree to all the terms and conditions <p>
+    <p><input type="checkbox"> Inform me about offers and discounts.<p>
+    </h3>
+  <button type = "submit" id= "butnsup" onclick="return confirmPassword()"> Register</button>
+  <p id = "msgPrint"></p>
+</div>
+</form>
+  <footer id = "footer"> 
+            
+    <!-- Company Details -->
+    <!-- 1. Address  
+        2. Contact Number 
+        3. Enquiry Mail  
+    -->
+    <div class="company-details"> 
+        <div class="row"> 
+            <div id ="col1"> 
+                <span id = "icon" class="fa fa-map-marker"></span> 
+                      
+                <span> 
+                    345 California Street, 
+                    <br />San Francisco, CA, 91235 
+                </span> 
+            </div> 
+                  
+            <div id ="col2"> 
+                <span id="icon" class="fa fa-phone"></span> 
+
+                <span> 
+                    +1 415 876 3499
+                </span> 
+            </div> 
+                      
+            <div id ="col3"> 
+                <span id="icon" class="fa fa-envelope"></span> 
+                <span>info@kick.com</span> 
+            </div> 
+        </div>
+    </div> 
+              
+    <!-- Copyright Section -->
+    <div class="copyright"> 
+        <p>©2020 All rights reserved | KICK Inc.</p> 
+      
+        <ul class="contact"> 
+            <li> 
+                <a href="https://twitter.com/explore" class="fa fa-twitter"> 
+                </a> 
+            </li> 
+              
+            <li> 
+                <a href="https://www.facebook.com/" class="fa fa-facebook"> 
+                </a> 
+            </li> 
+              
+            <li> 
+                <a href="https://www.instagram.com/accounts/login/?hl=en" class="fa fa-instagram"> 
+                </a> 
+            </li> 
+            <li> 
+              <a href="https://in.linkedin.com/?trk=organization_guest_nav-header-logo" class="fa fa-linkedin"> 
+              </a> 
+          </li> 
+        </ul> 
+    </div> 
+  </footer> 
+  <script>
+    window.onscroll = function() {myFunction()};
+    
+    var header = document.getElementById("navbar");
+    var sticky = header.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+
+ var inputPass = document.getElementById("password");
+  var length= document.getElementById("length");
+  var number = document.getElementById("number");
+  var uppercase = document.getElementById("uppercase");
+
+
+
+
+  //shows popupsmsg when clicked on password feild
+  inputPass.onfocus = function(){
+  document.getElementById("popupmsg").style.display= "block";
+  }
+
+  
+
+  //when the click is outside the password box
+  inputPass.onblur = function(){
+    document.getElementById("popupmsg").style.display = "none";
+  }
+
+  //when something is being typed on password feild
+  inputPass.onkeyup = function(){
+
+    var letterUppercase = /[A-Z]/g;
+    if (inputPass.value.match(letterUppercase))
+    {
+      capital.classList.remove("invalid");
+      capital.classList.add("valid");
+    }
+    else {
+      capital.classList.remove("valid");
+      capital.classList.add("invalid");
+    }
+    var num = /[0-9]/g;
+    if (inputPass.value.match(num))
+    {
+      number.classList.remove("invalid");
+      number.classList.add("valid");
+    }
+    else {
+      number.classList.remove("valid");
+      number.classList.add("invalid");
+    }
+    if (inputPass.value.length >= 8 )
+    {
+      length.classList.remove("invalid");
+      length.classList.add("valid");
+    }
+    else {
+      length.classList.remove("valid");
+      length.classList.add("invalid");
+    }
+    
+  }
+/*
+  function validationOnsubmit(){
+    var pass2 = document.getElementById("password2");
+    pass2.onsubmit = function(){
+
+      var matchPassword = inputPass.onkeyup();
+
+      if( pass2.value.match(matchPassword))
+      {
+        alert("You are registered");
+      }
+      else{
+        alert("password must match");
+      }
+    }
+  }
+  */
+
+/*
+  var inputPass2 = document.getElementById("password2");
+
+
+  inputPass2.onfocus = function(){
+  document.getElementById("unmatchError").style.display= "block";
+  }
+  
+  inputPass2.onblur = function(){
+    document.getElementById("unmatchError").style.display = "none";
+  }
+
+  inputPass2.onkeyup = function()
+  {
+    document.getElementById("unmatchError").style.display = "none";
+  }
+
+
+  inputPass2.onkeyup = function(){
+    var matchPassword = inputPass.onkeyup();
+    if (inputPass2.value.match(matchPassword)){
+        noMatch.classList.remove("invalid");
+        match.classList.add("valid");
+    }
+    else{
+      noMatch.classList.add("invalid");
+      match.classList.remove("valid");
+    }
+  }
+*/
+
+var password = document.getElementById("password")
+var checkPassword = document.getElementById("password2");
+
+function confirmPassword(){
+  if(password.value != checkPassword.value) {
+    checkPassword.setCustomValidity("Password do not match");
+s
+  } else {
+
+      }
+      var popMsg = document.getElementById("msg").value;
+  document.getElementById("msgPrint").innerHTML = " We sent a link to your email "
+   + popMsg ;
+  alert("we have sent a activation code to your email " + popMsg + " Please check your e-mail and click on the link to verify." )
+}
+
+function emailVerify()
+{
+  
+  
+  
+}
+
+//password.onchange = confirmPassword;
+//checkPassword.onkeyup = confirmPassword;
+password.onsubmit = confirmPassword;
+    </script>
+	</body>
+  </html>

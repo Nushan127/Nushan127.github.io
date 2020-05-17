@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Puma</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="icon" href="images/icon.png">
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="styles/product.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://use.fontawesome.com/c1aff5cbab.js"></script>
+
+    </head>
+
+    <body>
+        <div class="header">
+            <a href ="index.html"> <img src="images/logo.png"> </a>
+        </div>
+
+        <div class="topnav" id="navbar">
+        <a href="aboutus.html">About</a>
+        <a href="brands.html">Collection</a>
+        <a href="contact.html">Contact</a>
+        <a href="faqs.html">FAQs</a>
+        <a href="login.html" style="float:right" class="fa fa-user fa-5px"> </a>
+      <a href="cart.html" style="float: right;" class="fa fa-shopping-cart fa-5px"></a>
+        <form style="float:right">
+            <input type="text" name="search" placeholder="Search">
+        </form>
+        </div>
+        <center>
+        <article class="card">
+        <div class="card__right">
+        <h2 class="card__name"> SPEED 500 RAPID</h2>
+        <div class="card__price">$80</div>
+        <p class="card__info">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis sequi qui nisi quisquam nemo sint voluptates assumenda veniam inventore, nihil ullam alias pariatur! Libero deserunt incidunt in doloribus, ipsam reprehenderit?  </p>
+        <label for="size">Size:</label>
+        <select id="size">
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        </select> &nbsp;&nbsp;
+        <a class="card__cta">Add to Cart</a> <!--need to link to the CART here!!-->
+        </div>
+        <div class="card__left"> 
+            <div class="card__image">
+            <img src="images/puma.jpg" alt="A Modern CSS T-shirt." />
+            </div>
+        </div>
+        </article> </center>
+
+        <footer id = "footer"> 
+        <!--Company Details-->
+        <div class="company-details"> 
+            <div class="row"> 
+                <div id ="col1"> 
+                    <span id = "icon" class="fa fa-map-marker"></span> 
+                            
+                    <span> 
+                        345 California Street, 
+                        <br />San Francisco, CA, 91235 
+                    </span> 
+                </div> 
+                        
+                <div id ="col2"> 
+                    <span id="icon" class="fa fa-phone"></span> 
+
+                    <span> 
+                        +1 415 876 3499
+                    </span> 
+                </div> 
+                            
+                <div id ="col3"> 
+                    <span id="icon" class="fa fa-envelope"></span> 
+                    <span>info@kick.com</span> 
+                </div> 
+            </div>
+        </div> 
+                    
+        <!-- Copyright Section -->
+        <div class="copyright"> 
+            <p>©2020 All rights reserved | KICK Inc.</p> 
+            
+            <ul class="contact"> 
+                <li> 
+                    <a href="https://twitter.com/explore" class="fa fa-twitter"> 
+                    </a> 
+                </li> 
+                    
+                <li> 
+                    <a href="https://www.facebook.com/" class="fa fa-facebook"> 
+                    </a> 
+                </li> 
+                    
+                <li> 
+                    <a href="https://www.instagram.com/accounts/login/?hl=en" class="fa fa-instagram"> 
+                    </a> 
+                </li> 
+                <li> 
+                    <a href="https://in.linkedin.com/?trk=organization_guest_nav-header-logo" class="fa fa-linkedin"> 
+                    </a> 
+                </li> 
+            </ul> 
+        </div> 
+        </footer> 
+        <script>
+            window.onscroll = function() {myFunction()};
+            
+            var header = document.getElementById("navbar");
+            var sticky = header.offsetTop;
+            
+            function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+            }
+            </script>
+    </body>
+</html>
+
+
+<!--https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_slideshow_self-->
